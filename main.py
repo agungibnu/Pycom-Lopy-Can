@@ -2,7 +2,7 @@
 # dokumentasi : https://docs.pycom.io/firmwareapi/pycom/machine/can/#constructors
 import utime
 import pycom
-  pycom.heartbeat(False)
+pycom.heartbeat(False)
 pycom.rgbled(0xf00)
 # pycom.pybytes_on_boot(False)
 
