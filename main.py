@@ -2,9 +2,10 @@
 # dokumentasi : https://docs.pycom.io/firmwareapi/pycom/machine/can/#constructors
 import utime
 import pycom
+from machine import CAN
 pycom.heartbeat(False)
 pycom.rgbled(0xf00)
-# pycom.pybytes_on_boot(False)
+#pycom.pybytes_on_boot(False)
 
 # Init CANBUS
 
@@ -18,7 +19,7 @@ def can_cb(can_o):
 can.callback(handler=can_cb, trigger=CAN.RX_FRAME)
 
 
-#For example:
+#For example filter:
 
 #can.soft_filter(CAN.FILTER_LIST, [0x100, 0x200, 0x300, 0x400])  # only accept identifiers from 0x100, 0x200, 0x300 and 0x400
 
